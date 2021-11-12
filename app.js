@@ -1,10 +1,6 @@
 function computerPlay(){
-    let computerVal=Math.floor(Math.random()*3);
-    if (computerVal===0){
-        return "rock"
-    }else if(computerVal===1){
-        return "paper"
-    }else if (computerVal===2){
-        return "scissors"
-    }
+    let computerChoice=Math.floor(Math.random()*3);
+    const compVal=["rock","paper","scissors"]
+    return compVal[computerChoice]
 }
+console.log(computerPlay())
