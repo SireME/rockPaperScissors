@@ -1,5 +1,4 @@
 
-
 function computerPlay(){
     let computerChoice=Math.floor(Math.random()*3);
     const compVal=["rock","paper","scissors"];
@@ -10,7 +9,7 @@ function playerSelecct(){
     return plInput
 }
 
-function playGame(){
+function playRound(){
     const playerInput=playerSelecct()
     const computerPl=computerPlay();
     let winState="Wow You won"
@@ -25,9 +24,15 @@ function playGame(){
     }else{
         winState="You loose";
     }
-    console.log(`You played ${playerInput} and the computer played ${computerPl}  \n RESULTS`)
+    console.log(`You played ${playerInput} and the computer played ${computerPl}  \n RESULTS \n ${winState}`)
     return winState
  
 }
-console.log(playGame())
 
+function game(){
+    for (let index = 1; index < 6; index++) {
+        playRound();     
+    }    
+}
+
+game();
